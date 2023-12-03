@@ -33,8 +33,7 @@ def is_game_possible(game: CubeGame) -> bool:
 
 
 def main():
-    # cube_games_list = data_reader("puzzle_input.txt")
-    cube_games_list = data_reader("C://Users//Tatahah//Projects//advent-of-code-2023//day_2//puzzle_input.txt")
+    cube_games_list = data_reader("puzzle_input.txt")
 
     result = sum([cube_game_obj.game_number if is_game_possible(cube_game_obj) else 0 for cube_game_obj in [split_to_cube_games(cube_game) for cube_game in cube_games_list]])
     print(f"Sum of all possible game numbers equals to: {result}")
